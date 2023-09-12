@@ -1,6 +1,5 @@
 @isTest
 private class AccountTriggerHelperTest {
-  
   @isTest
   static void testBillingStateLength() {
     // Prepare mock data
@@ -15,8 +14,9 @@ private class AccountTriggerHelperTest {
     Account account = accounts[0];
     Assert.isTrue(account.hasErrors(), 'Account record should have an error');
     Database.Error error = account.getErrors()[0];
-    Assert.isTrue(error.fields.contains('BillingState'), 'Account record should have an error on BillingState');
+    Assert.isTrue(
+      error.fields.contains('BillingState'),
+      'Account record should have an error on BillingState'
+    );
   }
 }
-
-            
