@@ -1,0 +1,1 @@
+rm .sfdx/tools/testresults/apex/*
